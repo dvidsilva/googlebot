@@ -85,31 +85,55 @@ More complete example
 
 ## Options
 
-### allowCrawling<small>: true</small>
+### allowCrawling:
+
+    default: true
+
 whether or not to respond to google requests or request that meet a particular requirement(someday)
 
-### trigger<small>: '?_escaped_fragment_='</small>
+### trigger:
+
+    default: '?_escaped_fragment_='
+
 Which string in the url triggers the phantom rendering instead
 
-### append<small>: '&phantom=true'</small>
+### append:
+
+    default: '&phantom=true'
+
 Add something to the new request, I use to prevent Google from seeing certain stuff
 
-### delay<small>: 1000</small>
+### delay:
+
+    default: 1000
+
 Number of miliseconds to wait for the page to render before sending the request
 
-### protocol<small>: 'http'</small>
+### protocol:
+
+    default: 'http'
+
 In case you want to redirect the request to a different one
 
-### host<small>: undefined</small>
+### host:
+
+    default: undefined
+
 In case you want to redirect phantomJS requests to a different host even, where you store the static
 files or something
 
-### canonical<small>:undefined</small>
+### canonical:
+
+    default: undefined
+
 [ref](http://googlewebmastercentral.blogspot.com/2011/06/supporting-relcanonical-http-headers.html)
 specify the preferred host for google to associate the page resulting, a header will be sent to tell Google
 which url you rather show to the people searching for you
 
-### evaluate<small>: function(){}; </small>
+### evaluate:
+
+    default: function(){};
+
 (currently not supported) the idea is to allow you to add more client side javascript that phantomJS will
 execute before returning the results to Google withouth having to modify the module. An example could be, that
 you don't want to have empty alt tags in your images, because is bad SEO so you can do
