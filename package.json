@@ -1,0 +1,24 @@
+{
+  "name": "googlebot",
+  "version": "0.1.1",
+  "description": "Express middleware that returns the resulting html after executing javascript, allowing crawlers to read on the page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dvidsilva/googlebot.git"
+  },
+  "keywords": [
+    "phantomjs",
+    "SEO",
+    "crawler",
+    "google"
+  ],
+  "author": "dvidsilva",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/dvidsilva/googlebot/issues"
+  }
+}
