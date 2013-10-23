@@ -1,6 +1,6 @@
 {
   "name": "googlebot",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "Express middleware that returns the resulting html after executing javascript, allowing crawlers to read on the page",
   "main": "index.js",
   "scripts": {
