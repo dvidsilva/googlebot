@@ -20,5 +20,8 @@
   "license": "BSD",
   "bugs": {
     "url": "https://github.com/dvidsilva/googlebot/issues"
+  },
+  "dependencies": {
+    "node-phantom": "0.2.5"
   }
 }
