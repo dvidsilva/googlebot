@@ -31,17 +31,18 @@ exports = module.exports = function(options) {
       // the part before the hashbang or trigger
       path: urlParts[0],
       // the part after the trigger
-      fragment : urlParts[1]
+      fragment : urlParts[1],
+      append : options.append
     };
 
-    /* // I'm not sure why do we need this
+    /* The hash fragment is for those pages that store their state in it
      * if (url.fragment.length === 0) {
-      // We are dealing with crawlable an ajax page without a hash fragment
-      url.append = options.append;
-      url.hashbang = false;
+    // We are dealing with crawlable an ajax page without a hash fragment
+    url.append = options.append;
+    url.hashbang = false;
     } else {
-      url.hashbang = true;
-      url.path += '#!';
+    url.hashbang = true;
+    url.path += '#!';
     }*/
     return url;
   }
@@ -50,7 +51,7 @@ exports = module.exports = function(options) {
     phantom.create(function(err,ph) {
       ph.createPage(function(err,page) {
         if(err) callback(err,undefined);
-        page.open( url.protocol + url.host + url.path + url.fragment , function(err,status) {
+        page.open( url.protocol + url.host + url.path + url.fragment + url.append , function(err,status) {
           setTimeout( function() {
             page.evaluate(function(){
               // this code is executed in the page after loading it,

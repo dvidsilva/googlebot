@@ -135,7 +135,7 @@ which url you rather show to the people searching for you
     default: function(){};
 
 (currently not supported) the idea is to allow you to add more client side javascript that phantomJS will
-execute before returning the results to Google withouth having to modify the module. An example could be, that
+execute before returning the results to Google withouth having to modify the module. An example could be that
 you don't want to have empty alt tags in your images, because is bad SEO so you can do
 
     $('img').each(function(){ $(this).attr('alt',$(this).attr('src')); });
