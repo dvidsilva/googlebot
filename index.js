@@ -53,7 +53,6 @@ exports = module.exports = function(options) {
       ph.createPage(function(err,page) {
         if(err) callback(err,undefined);
         crawling_url = url.protocol + url.host + url.path + url.delimiter + url.fragment + url.append;
-        console.log(crawling_url);
         page.open( crawling_url , function(err,status) {
           setTimeout( function() {
             page.evaluate(function(){
@@ -66,7 +65,6 @@ exports = module.exports = function(options) {
             }, function(err,result){
               if(err) callback(err,undefined);
               // result is the resulting html after loading the request and executing its js
-              console.log(result);
               callback(undefined,result);
               ph.exit();
             });
